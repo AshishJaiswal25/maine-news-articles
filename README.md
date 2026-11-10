@@ -15,12 +15,12 @@ This README is written by it too, so edits here are overwritten.
 
 | | |
 |---|---|
-| Articles | 15,350 |
-| With text | 14,312 |
-| Distinct stories, copies merged | 11,206 |
+| Articles | 15,738 |
+| With text | 14,644 |
+| Distinct stories, copies merged | 11,500 |
 | Outlets | 27 |
-| Days | Sep 30, 2026 to Nov 8, 2026 (40 days) |
-| Last updated | Nov 9, 2026 |
+| Days | Sep 30, 2026 to Nov 9, 2026 (41 days) |
+| Last updated | Nov 10, 2026 |
 
 - `articles/YYYY-MM-DD.jsonl`: the articles published that day, one JSON object per line,
   text included.
