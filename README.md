@@ -15,12 +15,12 @@ This README is written by it too, so edits here are overwritten.
 
 | | |
 |---|---|
-| Articles | 18,169 |
-| With text | 16,843 |
-| Distinct stories, copies merged | 13,359 |
+| Articles | 18,556 |
+| With text | 17,225 |
+| Distinct stories, copies merged | 13,658 |
 | Outlets | 27 |
-| Days | Sep 30, 2026 to Nov 16, 2026 (48 days) |
-| Last updated | Nov 17, 2026 |
+| Days | Sep 30, 2026 to Nov 17, 2026 (49 days) |
+| Last updated | Nov 18, 2026 |
 
 - `articles/YYYY-MM-DD.jsonl`: the articles published that day, one JSON object per line,
   text included.
@@ -71,7 +71,8 @@ moved on, so the archive keeps growing.
 | `outlet_reach` | `local` or `statewide`: whether the outlet covers a locality or the state |
 | `title`, `url`, `language` | As Media Cloud gives them |
 | `scope` | What the story is about: `local` (one community), `regional` (several nearby, or a county), `statewide` (Maine as a whole), `national` (not specifically about Maine), or `not_maine` (somewhere else entirely) |
-| `places` | Maine towns and counties the story is tagged to; `role` is `primary` (what it is about) or `mentioned` |
+| `places` | Maine towns and counties the story is tagged to; `role` is `primary` (what it is about) or `mentioned`. Each town also gives the `house_districts` and `senate_districts` it is in: several when the town is split between districts (Portland is in eight House districts), none for a county |
+| `house_districts`, `senate_districts` | Every Maine House and Senate district the story's towns are in, primary and mentioned together. A story about Portland is in all eight of its House districts, so a district list says where a story's towns are, not which one seat it is about |
 | `main_topic`, `also_topics` | The story's main topic, and any others it also covers |
 | `geotag_status`, `topic_status` | `ok` once tagged; `not_tagged` or `not_classified` before the day's tagging has run |
 | `text_status` | `ok`; `short` (under 600 characters, usually a paywall teaser); `robots` (robots.txt disallows fetching, not fetched); `http_error` (the page returned an error); `failed` (the request failed); `not_fetched` (not tried yet) |
@@ -79,4 +80,5 @@ moved on, so the archive keeps growing.
 | `text` | The article text, or `null` when there is none |
 
 The CSVs have the same rows, with `places` split into `primary_places`, `mentioned_places`
-and `counties`, and without the text.
+and `counties`, the district numbers as `house_districts` and `senate_districts` ("113;
+114"), and without the text.
